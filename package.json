@@ -1,0 +1,22 @@
+{
+  "name": "kreattix-design",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node-sass -w scss/ -o dist/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kreattix-design/kreattix-design.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kreattix-design/kreattix-design/issues"
+  },
+  "homepage": "https://github.com/kreattix-design/kreattix-design#readme",
+  "dependencies": {
+    "node-sass": "^7.0.1"
+  }
+}

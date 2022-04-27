@@ -1,0 +1,100 @@
+@each $class, $value in $theme-colors {
+	.bg-#{$class} {
+		@include background-color(var(--#{$prefix}#{$class}));
+	}
+	.text-#{$class} {
+		@include text-color(var(--#{$prefix}#{$class}));
+	}
+}
+
+@each $class, $value in $colors {
+	.bg-#{$class} {
+		@include background-color($value);
+	}
+	.text-#{$class} {
+		@include text-color($value);
+	}
+}
+
+@each $shade, $color in $shades {
+	@each $class, $value in $color {
+		.bg-#{$class} {
+			@include background-color($value);
+		}
+		.text-#{$class} {
+			@include text-color($value);
+		}
+	}
+}
+
+@each $class, $value in $spacers {
+	.p-#{$class} {
+		padding: $value;
+	}
+	.pl-#{$class} {
+		padding-left: $value;
+	}
+	.pr-#{$class} {
+		padding-right: $value;
+	}
+	.pt-#{$class} {
+		padding-top: $value;
+	}
+	.pb-#{$class} {
+		padding-bottom: $value;
+	}
+	.pv-#{$class} {
+		padding-top: $value;
+		padding-bottom: $value;
+	}
+	.ph-#{$class} {
+		padding-left: $value;
+		padding-right: $value;
+	}
+	.m-#{$class} {
+		margin: $value;
+	}
+	.ml-#{$class} {
+		margin-left: $value;
+	}
+	.mr-#{$class} {
+		margin-right: $value;
+	}
+	.mt-#{$class} {
+		margin-top: $value;
+	}
+	.mb-#{$class} {
+		margin-bottom: $value;
+	}
+	.mv-#{$class} {
+		margin-top: $value;
+		margin-bottom: $value;
+	}
+	.mh-#{$class} {
+		margin-left: $value;
+		margin-right: $value;
+	}
+}
+.m-auto {
+	margin: auto;
+}
+.ml-auto {
+	margin-left: auto;
+}
+.mr-auto {
+	margin-right: auto;
+}
+.mt-auto {
+	margin-top: auto;
+}
+.mb-auto {
+	margin-bottom: auto;
+}
+.mv-auto {
+	margin-top: auto;
+	margin-bottom: auto;
+}
+.mv-auto {
+	margin-left: auto;
+	margin-right: auto;
+}

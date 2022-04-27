@@ -1,0 +1,30 @@
+.page-wrapper {
+	width: 100%;
+}
+
+.full-height {
+	height: 100vh;
+}
+
+.colors-row {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 12px;
+
+	.colors-col {
+		flex: 1;
+	}
+}
+
+.color-palatte {
+	overflow: hidden;
+	border-radius: 10px;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+
+	.box {
+		width: 100%;
+		flex: 1;
+	}
+}

@@ -1,0 +1,9 @@
+@mixin background-color($color) {
+	background-color: $color;
+}
+@mixin text-color($color) {
+	color: $color;
+}
+@mixin font-size($font-size) {
+	font-size: $font-size;
+}
