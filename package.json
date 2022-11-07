@@ -1,6 +1,6 @@
 {
   "name": "kreattix-design",
-  "private": true,
+  "private": false,
   "version": "0.0.1",
   "type": "module",
   "files": [
@@ -10,7 +10,11 @@
     ".": {
       "import": "./dist/index.es.js",
       "require": "./dist/index.umd.js"
-    }
+    },
+    "./dist/css/kreattix-design.css": "./dist/css/kreattix-design.css",
+    "./dist/css/kreattix-design.min.css": "./dist/css/kreattix-design.min.css",
+    "./dist/scss/kreattix-design.scss": "./dist/scss/kreattix-design.scss",
+    "./dist/scss/variables.scss": "./dist/scss/variables.scss"
   },
   "main": "./dist/index.umd.js",
   "module": "./dist/index.es.js",
@@ -34,6 +38,7 @@
     "@typescript-eslint/eslint-plugin": "^5.42.0",
     "@typescript-eslint/parser": "^5.42.0",
     "@vitejs/plugin-react": "^2.2.0",
+    "clean-css": "^5.3.1",
     "eslint": "^8.27.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.2.1",
@@ -53,8 +58,5 @@
   },
   "keywords": [],
   "author": "Prince Patel",
-  "license": "MIT",
-  "dependencies": {
-    "clean-css": "^5.3.1"
-  }
+  "license": "MIT"
 }

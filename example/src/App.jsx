@@ -1,5 +1,3 @@
-import './App.css'
-
 import { Helloworld } from 'kreattix-design'
 
 import reactLogo from './assets/react.svg'

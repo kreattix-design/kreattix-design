@@ -22,6 +22,7 @@ export default defineConfig((configEnv) => ({
       include: ['src/**/*'],
     }),
     scss({
+      sourceMap: true,
       failOnError: true,
       output: async function (styles) {
         const dirname = 'dist/css/'
@@ -40,7 +41,7 @@ export default defineConfig((configEnv) => ({
       formats: ['es', 'umd'],
       fileName: (format) => `index.${format}.js`,
     },
-    sourcemap: true,
+    sourcemap: false,
     minify: 'esbuild',
     rollupOptions: {
       external: ['react', 'react-dom'],
