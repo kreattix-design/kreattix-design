@@ -6,16 +6,6 @@
   "files": [
     "dist"
   ],
-  "exports": {
-    ".": {
-      "import": "./dist/index.es.js",
-      "require": "./dist/index.umd.js"
-    },
-    "./dist/css/kreattix-design.css": "./dist/css/kreattix-design.css",
-    "./dist/css/kreattix-design.min.css": "./dist/css/kreattix-design.min.css",
-    "./dist/scss/kreattix-design.scss": "./dist/scss/kreattix-design.scss",
-    "./dist/scss/variables.scss": "./dist/scss/variables.scss"
-  },
   "main": "./dist/index.umd.js",
   "module": "./dist/index.es.js",
   "types": "./dist/index.d.ts",
@@ -32,6 +22,7 @@
     "react-dom": "16.8.0 || >=17.x"
   },
   "devDependencies": {
+    "@types/lodash": "^4.14.188",
     "@types/node": "^18.11.9",
     "@types/react": "^18.0.22",
     "@types/react-dom": "^18.0.7",
@@ -58,5 +49,8 @@
   },
   "keywords": [],
   "author": "Prince Patel",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "lodash": "^4.17.21"
+  }
 }

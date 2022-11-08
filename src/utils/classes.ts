@@ -11,8 +11,8 @@ export const addPrefix = (classes: string | string[] = '', prefix = '') => {
 }
 
 export const classnames = (
-  classes: string | { [key: string]: boolean },
-  staticClasses: string,
+  classes: string | { [key: string]: any },
+  staticClasses = '',
   prefix: string | boolean = false,
 ) => {
   const finalCLasses: string[] = []
