@@ -18,7 +18,7 @@ function App() {
           <Button size="large" icon="ArrowRight" iconPosition="end">
             Test Button
           </Button>
-          <Divider orientation="left">
+          <Divider type="dotted" orientation="left">
             <strong>Divider</strong>
           </Divider>
           <Grid>
@@ -28,9 +28,9 @@ function App() {
               </Text.Title>
             </Grid.Item>
             <Grid.Item>
-              <h1>
+              <Text.Title level={1}>
                 Vite <Icon icon="Plus" size="small" /> React
-              </h1>
+              </Text.Title>
             </Grid.Item>
           </Grid>
         </Container>
