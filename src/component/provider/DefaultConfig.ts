@@ -5,4 +5,19 @@ export const DefaultConfig: KreattixContextProps = {
   Icon: {
     icon: 'Close',
   },
+  Button: {
+    iconPosition: 'start',
+    rounded: false,
+    type: 'solid',
+  },
+  ButtonLink: {
+    iconPosition: 'start',
+    rounded: false,
+    type: 'text',
+  },
+  ButtonGroup: {
+    iconPosition: 'start',
+    rounded: false,
+    type: 'solid',
+  },
 }

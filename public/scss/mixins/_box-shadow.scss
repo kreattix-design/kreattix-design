@@ -3,3 +3,9 @@
     box-shadow: $value $color;
   }
 }
+
+@mixin drop-shadow($value: $box-shadow, $color: $box-shadow-color) {
+  @if $enable-theme-shadow {
+    filter: drop-shadow($value $color) saturate(100%);
+  }
+}

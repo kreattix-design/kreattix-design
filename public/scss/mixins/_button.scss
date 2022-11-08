@@ -1,3 +1,9 @@
+@mixin button-shadow($value: $box-shadow, $color: $box-shadow-color) {
+	&.#{$prefix}btn-shadow {
+		@include box-shadow($value, $color);
+	}
+}
+
 @mixin button_variants($variant: $theme-colors) {
 	@each $color, $value in $theme-colors {
 		&.#{$prefix}btn-#{$color} {
@@ -11,7 +17,7 @@
 				background-color: var(--#{$prefix}#{$color}-hover);
 				color: color-contrast($value);
 				@if $enable-color-shadow {
-					@include box-shadow($btn-box-shadow-hover, var(--#{$prefix}#{$color}-hover));
+					@include button-shadow($btn-box-shadow-hover, var(--#{$prefix}#{$color}-hover));
 				}
 			}
 
@@ -19,7 +25,7 @@
 				border-color: var(--#{$prefix}#{$color}-active);
 				background-color: var(--#{$prefix}#{$color}-active);
 				color: color-contrast($value);
-				@include box-shadow($btn-box-shadow-hover, transparent);
+				@include button-shadow($btn-box-shadow-hover, transparent);
 			}
 		}
 	}
@@ -37,7 +43,7 @@
 				background-color: var(--#{$prefix}#{$color}-hover);
 				color: color-contrast($value);
 				@if $enable-color-shadow {
-					@include box-shadow($btn-box-shadow-hover, var(--#{$prefix}#{$color}-hover));
+					@include button-shadow($btn-box-shadow-hover, var(--#{$prefix}#{$color}-hover));
 				}
 			}
 
@@ -45,7 +51,7 @@
 				border-color: var(--#{$prefix}#{$color}-active);
 				background-color: var(--#{$prefix}#{$color}-active);
 				color: color-contrast($value);
-				@include box-shadow($btn-box-shadow-hover, transparent);
+				@include button-shadow($btn-box-shadow-hover, transparent);
 			}
 		}
 	}

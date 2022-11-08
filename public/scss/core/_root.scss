@@ -19,8 +19,8 @@
   }
   @each $color, $value in $theme-colors {
     --#{$prefix}#{$color}: #{$value};
-    --#{$prefix}#{$color}-hover: #{lighten($value, 7%)};
-    --#{$prefix}#{$color}-active: #{darken($value, 7%)};
+    --#{$prefix}#{$color}-hover: #{lighten($value, 5%)};
+    --#{$prefix}#{$color}-active: #{darken($value, 5%)};
   }
   @each $color, $value in $grays {
     --#{$prefix}#{$color}: #{$value};
