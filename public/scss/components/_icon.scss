@@ -1,5 +1,7 @@
 .#{$prefix} {
 	&icon {
+		display: inline-block;
+		vertical-align: middle;
 		line-height: 0;
 		svg {
 			font-size: 150%;

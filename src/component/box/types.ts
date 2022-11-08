@@ -6,7 +6,7 @@ import {
   Gutters,
   JustifyContents,
   ResponsiveGutters,
-} from '../../utils/types'
+} from '../../types'
 
 export type BoxSizes = 'fullscreen' | 'cover' | 'fill-container' | 'hug-content'
 

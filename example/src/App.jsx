@@ -1,4 +1,4 @@
-import { Box, Provider } from 'kreattix-design'
+import { Box, Icon, Provider } from 'kreattix-design'
 
 import reactLogo from './assets/react.svg'
 
@@ -16,7 +16,9 @@ function App() {
             </a>
           </Box>
 
-          <h1>Vite + React</h1>
+          <h1>
+            Vite <Icon icon="Plus" /> React
+          </h1>
         </div>
       </Box>
     </Provider>

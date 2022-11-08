@@ -51,6 +51,7 @@
   "author": "Prince Patel",
   "license": "MIT",
   "dependencies": {
+    "kreattix-design-icons": "^0.3.3",
     "lodash": "^4.17.21"
   }
 }

@@ -1,6 +1,7 @@
 import { FC } from 'react'
 
-import { classnames, ResponsiveGutters } from '../../utils'
+import { ResponsiveGutters } from '../../types'
+import { classnames } from '../../utils'
 import { useKreattixContext } from '../provider'
 import { BoxProps } from './types'
 

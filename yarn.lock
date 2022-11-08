@@ -2397,6 +2397,11 @@
   "resolved" "https://registry.npmjs.org/kolorist/-/kolorist-1.6.0.tgz"
   "version" "1.6.0"
 
+"kreattix-design-icons@^0.3.3":
+  "integrity" "sha512-bYOneo9TiHwWiT+ZAA2tXz9ScBB8Xw3rSMIFg69D9gWVDPhJc316PxT20XI2vY/KiP4+WdeYl0lykT3cZUlqtQ=="
+  "resolved" "https://registry.npmjs.org/kreattix-design-icons/-/kreattix-design-icons-0.3.3.tgz"
+  "version" "0.3.3"
+
 "levn@^0.4.1":
   "integrity" "sha512-+bT2uH4E5LGE7h/n3evcS/sQlJXCpIp6ym8OWJ5eV6+67Dsql/LaaT7qJBAt2rzfoa/5QBGBhxDix1dMt2kQKQ=="
   "resolved" "https://registry.npmjs.org/levn/-/levn-0.4.1.tgz"
@@ -3051,7 +3056,7 @@
   "resolved" "https://registry.npmjs.org/quick-lru/-/quick-lru-4.0.1.tgz"
   "version" "4.0.1"
 
-"react-dom@^18.2.0":
+"react-dom@^18.2.0", "react-dom@16.8.0 || >=17.x":
   "integrity" "sha512-6IMTriUmvsjHUjNtEDudZfuDQUoWXVxKHhlEGSk81n4YFS+r/Kl99wXiwlVXtPBtJenozv2P+hxDsw9eA7Xo6g=="
   "resolved" "https://registry.npmjs.org/react-dom/-/react-dom-18.2.0.tgz"
   "version" "18.2.0"
@@ -3069,7 +3074,7 @@
   "resolved" "https://registry.npmjs.org/react-refresh/-/react-refresh-0.14.0.tgz"
   "version" "0.14.0"
 
-"react@^18.2.0":
+"react@^18.2.0", "react@16.8.0 || >=17.x":
   "integrity" "sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ=="
   "resolved" "https://registry.npmjs.org/react/-/react-18.2.0.tgz"
   "version" "18.2.0"
