@@ -56,7 +56,7 @@
     cursor: pointer;
     color: color-contrast($btn-background-color);
     @include border-radius-with-pill($btn-border-radius);
-    @include box-shadow($btn-box-shadow, $btn-box-shadow-color);
+    @include button-shadow($btn-box-shadow, $btn-box-shadow-color);
     @include transition($btn-transition);
 
     &:not(&-text) {
@@ -64,13 +64,13 @@
       &:focus {
         border-color: $primary;
         color: $primary;
-        @include box-shadow($btn-box-shadow-hover, $btn-box-shadow-color-hover);
+        @include button-shadow($btn-box-shadow-hover, $btn-box-shadow-color-hover);
       }
 
       &:active {
         border-color: $primary;
         color: $primary;
-        @include box-shadow($btn-box-shadow-hover, transparent);
+        @include button-shadow($btn-box-shadow-hover, transparent);
       }
     }
     &:not(&-outline):not(&-text) {

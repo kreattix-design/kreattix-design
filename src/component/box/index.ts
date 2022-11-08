@@ -1,2 +1,4 @@
-export { default as Box } from './Box'
-export type { BoxProps, BoxSizes } from './types'
+import Box from './Box'
+
+export * from './types'
+export default Box
