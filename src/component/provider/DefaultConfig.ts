@@ -27,4 +27,18 @@ export const DefaultConfig: KreattixContextProps = {
     plain: false,
     orientation: 'center',
   },
+  Grid: {
+    gutter: 3,
+  },
+  Text: {
+    ellipsis: false,
+  },
+  Paragraph: {
+    align: 'justify',
+    ellipsis: false,
+  },
+  Title: {
+    level: 1,
+    ellipsis: false,
+  },
 }

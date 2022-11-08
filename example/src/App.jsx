@@ -1,4 +1,4 @@
-import { Box, Button, Container, Divider, Icon, Provider } from 'kreattix-design'
+import { Box, Button, Container, Divider, Grid, Icon, Provider, Text } from 'kreattix-design'
 
 import reactLogo from './assets/react.svg'
 
@@ -21,9 +21,18 @@ function App() {
           <Divider orientation="left">
             <strong>Divider</strong>
           </Divider>
-          <h1>
-            Vite <Icon icon="Plus" size="small" /> React
-          </h1>
+          <Grid>
+            <Grid.Item span={6}>
+              <Text.Title level={4}>
+                Vite <Icon icon="Plus" size="small" /> React
+              </Text.Title>
+            </Grid.Item>
+            <Grid.Item>
+              <h1>
+                Vite <Icon icon="Plus" size="small" /> React
+              </h1>
+            </Grid.Item>
+          </Grid>
         </Container>
       </Box>
     </Provider>
