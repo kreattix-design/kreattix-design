@@ -20,4 +20,11 @@ export const DefaultConfig: KreattixContextProps = {
     rounded: false,
     type: 'solid',
   },
+  Container: {},
+  Divider: {
+    direction: 'horizontal',
+    type: 'solid',
+    plain: false,
+    orientation: 'center',
+  },
 }

@@ -1,4 +1,4 @@
-import { Box, Button, Icon, Provider } from 'kreattix-design'
+import { Box, Button, Container, Divider, Icon, Provider } from 'kreattix-design'
 
 import reactLogo from './assets/react.svg'
 
@@ -14,12 +14,17 @@ function App() {
             <img src={reactLogo} className="logo react" alt="React logo" />
           </a>
         </Box>
-        <Button size="large" icon="ArrowRight" iconPosition="end">
-          Test Button
-        </Button>
-        <h1>
-          Vite <Icon icon="Plus" size="small" /> React
-        </h1>
+        <Container>
+          <Button size="large" icon="ArrowRight" iconPosition="end">
+            Test Button
+          </Button>
+          <Divider orientation="left">
+            <strong>Divider</strong>
+          </Divider>
+          <h1>
+            Vite <Icon icon="Plus" size="small" /> React
+          </h1>
+        </Container>
       </Box>
     </Provider>
   )
