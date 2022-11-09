@@ -16,13 +16,15 @@
     --#{$prefix}#{$color}-700: #{darken($value, 10%)};
     --#{$prefix}#{$color}-800: #{darken($value, 15%)};
     --#{$prefix}#{$color}-900: #{darken($value, 20%)};
+    --#{$prefix}#{$color}-rgb: #{to-rgb($value)};
   }
   @each $color, $value in $theme-colors {
     --#{$prefix}#{$color}: #{$value};
     --#{$prefix}#{$color}-hover: #{lighten($value, 5%)};
     --#{$prefix}#{$color}-active: #{darken($value, 5%)};
+    --#{$prefix}#{$color}-rgb: #{to-rgb($value)};
   }
-  @each $color, $value in $grays {
+  @each $color, $value in $greys {
     --#{$prefix}#{$color}: #{$value};
   }
 }

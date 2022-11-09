@@ -18,15 +18,23 @@ export interface KreattixContextProps {
   Box: Pick<BoxProps, 'align' | 'justify' | 'direction' | 'size' | 'flex' | 'wrap' | 'gutter'>
   Button: Pick<
     ButtonProps,
-    'type' | 'variant' | 'size' | 'rounded' | 'disabled' | 'icon' | 'iconPosition' | 'shadow'
+    | 'type'
+    | 'variant'
+    | 'size'
+    | 'pilled'
+    | 'disabled'
+    | 'icon'
+    | 'iconPosition'
+    | 'shadow'
+    | 'fluid'
   >
   ButtonGroup: Pick<
     ButtonGroupProps,
-    'type' | 'variant' | 'size' | 'rounded' | 'icon' | 'iconPosition' | 'shadow'
+    'type' | 'variant' | 'size' | 'pilled' | 'icon' | 'iconPosition' | 'shadow' | 'fluid'
   >
   ButtonLink: Pick<
     ButtonLinkProps,
-    'type' | 'variant' | 'size' | 'rounded' | 'icon' | 'iconPosition' | 'shadow'
+    'type' | 'variant' | 'size' | 'pilled' | 'icon' | 'iconPosition' | 'shadow' | 'fluid'
   >
   Container: Pick<ContainerProps, 'fluid'>
   Divider: Pick<DividerProps, 'direction' | 'type' | 'plain' | 'orientation'>

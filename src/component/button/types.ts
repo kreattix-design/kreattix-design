@@ -6,27 +6,29 @@ import ButtonGroup from './ButtonGroup'
 import ButtonLink from './ButtonLink'
 
 export type IconPositions = 'start' | 'end'
-export type ButtonTypes = 'solid' | 'outline' | 'text'
+export type ButtonTypes = 'solid' | 'outlined' | 'text'
 
 export interface ButtonProps extends Omit<HTMLAttributes<HTMLButtonElement>, 'type'> {
   type?: ButtonTypes
   variant?: Variants
   size?: Sizes
-  rounded?: boolean
+  pilled?: boolean
   disabled?: boolean
   icon?: IconNames
   iconPosition?: IconPositions
   shadow?: boolean
+  fluid?: boolean
 }
 
 export interface ButtonLinkProps extends Omit<HTMLAttributes<HTMLAnchorElement>, 'type'> {
   type?: ButtonTypes
   variant?: Variants
   size?: Sizes
-  rounded?: boolean
+  pilled?: boolean
   icon?: IconNames
   iconPosition?: IconPositions
   shadow?: boolean
+  fluid?: boolean
 }
 
 export interface ButtonGroupProps {
@@ -35,10 +37,11 @@ export interface ButtonGroupProps {
   type?: ButtonTypes
   variant?: Variants
   size?: Sizes
-  rounded?: boolean
+  pilled?: boolean
   icon?: IconNames
   iconPosition?: IconPositions
   shadow?: boolean
+  fluid?: boolean
 }
 
 export interface ButtonCompoundProps extends ForwardRefExoticComponent<ButtonProps> {

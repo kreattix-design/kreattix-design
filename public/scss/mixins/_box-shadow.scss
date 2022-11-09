@@ -1,11 +1,11 @@
-@mixin box-shadow($value: $box-shadow, $color: $box-shadow-color) {
-  @if $enable-theme-shadow {
+@mixin box-shadow($value: $box-shadow, $color: $box-shadow-color, $enabled: $enable-theme-shadow) {
+  @if $enabled {
     box-shadow: $value $color;
   }
 }
 
-@mixin drop-shadow($value: $box-shadow, $color: $box-shadow-color) {
-  @if $enable-theme-shadow {
+@mixin drop-shadow($value: $box-shadow, $color: $box-shadow-color, $enabled: $enable-theme-shadow) {
+  @if $enabld {
     filter: drop-shadow($value $color) saturate(100%);
   }
 }

@@ -5,6 +5,10 @@
     calc(((red($color) * 0.299) + (green($color) * 0.587) + (blue($color) * 0.114)) / 255);
 }
 
+@function to-rgb($color) {
+  @return red($color), green($color), blue($color);
+}
+
 @function color-contrast($color, $dark: $dark-text-color, $light: $light-text-color) {
   @if $color == null {
     @return null;

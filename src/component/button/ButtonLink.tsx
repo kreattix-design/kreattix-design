@@ -7,18 +7,30 @@ import { useKreattixContext } from '../provider'
 import { ButtonLinkProps } from './types'
 
 const ButtonLink: FC<ButtonLinkProps> = (props) => {
-  const { children, className, variant, size, icon, iconPosition, rounded, type, shadow, ...rest } =
-    {
-      ...useKreattixContext().ButtonLink,
-      ...props,
-    }
+  const {
+    children,
+    className,
+    variant,
+    size,
+    icon,
+    iconPosition,
+    pilled,
+    type,
+    shadow,
+    fluid,
+    ...rest
+  } = {
+    ...useKreattixContext().ButtonLink,
+    ...props,
+  }
   const classes = classnames(
     {
       [`btn`]: true,
+      [`btn-fluid`]: fluid,
       [`btn-${variant}`]: variant,
       [`btn-${type}`]: type,
       [`btn-${size}`]: size,
-      [`btn-rounded`]: rounded,
+      [`btn-pilled`]: pilled,
       [`btn-with-icon`]: icon && children,
       [`btn-only-icon`]: icon && !children,
       [`btn-icon-${iconPosition}`]: icon && iconPosition,
@@ -42,7 +54,7 @@ const ButtonLink: FC<ButtonLinkProps> = (props) => {
         children
       ) : (
         <>
-          {iconPosition === 'start' && iconComponent(icon)}
+          {iconPosition !== 'end' && iconComponent(icon)}
           {children && <span>{children}</span>}
           {iconPosition === 'end' && iconComponent(icon)}
         </>
