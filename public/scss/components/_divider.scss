@@ -3,18 +3,9 @@
 		box-sizing: border-box;
 		margin: 0;
 		padding: 0;
+		border: 0;
 		border-top: $divider-border;
 
-		&-dotted {
-			border-style: dotted;
-			border-width: $divider-border-width;
-			border-color: $divider-border-color;
-		}
-		&-dashed {
-			border-style: dashed;
-			border-width: $divider-border-width;
-			border-color: $divider-border-color;
-		}
 		&-inner-text {
 			display: inline-block;
 			padding: $divider-text-padding;
@@ -59,17 +50,17 @@
 					font-size: $divider-font-size;
 					white-space: nowrap;
 					text-align: center;
-					border-top: 0;
-					border-top-color: $divider-border-color;
+					border: 0;
+					border-color: $divider-border-color;
 
 					&:before,
 					&:after {
 						position: relative;
 						top: 50%;
 						width: 50%;
+						border: 0;
 						border-top: $divider-border;
 						border-top-color: inherit;
-						border-bottom: 0;
 						transform: translateY(50%);
 						content: "";
 					}
@@ -84,6 +75,21 @@
 			vertical-align: middle;
 			border-top: 0;
 			border-left: $divider-border;
+		}
+
+		&-dotted {
+			border-style: dotted !important;
+			&:before,
+			&:after {
+				border-style: dotted !important;
+			}
+		}
+		&-dashed {
+			border-style: dashed !important;
+			&:before,
+			&:after {
+				border-style: dashed !important;
+			}
 		}
 	}
 }

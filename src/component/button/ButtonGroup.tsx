@@ -5,15 +5,25 @@ import { useKreattixContext } from '../provider'
 import { ButtonGroupProps } from './types'
 
 const ButtonGroup: FC<ButtonGroupProps> = (props) => {
-  const { children, className, variant, size, icon, iconPosition, rounded, type, shadow, ...rest } =
-    {
-      ...useKreattixContext().ButtonGroup,
-      ...props,
-    }
+  const {
+    children,
+    className,
+    variant,
+    size,
+    icon,
+    iconPosition,
+    pilled,
+    type,
+    shadow,
+    fluid,
+    ...rest
+  } = {
+    ...useKreattixContext().ButtonGroup,
+    ...props,
+  }
   const classes = classnames(
     {
       [`btn-group`]: true,
-      [`btn-shadow`]: shadow,
     },
     className,
     true,
@@ -21,7 +31,7 @@ const ButtonGroup: FC<ButtonGroupProps> = (props) => {
   const childrenWithProps = Children.map(children, (child) => {
     if (isValidElement(child)) {
       return cloneElement(child, {
-        ...{ type, variant, size, rounded, icon, iconPosition, shadow },
+        ...{ type, variant, size, pilled, icon, iconPosition, shadow, fluid },
         ...child.props,
       })
     }

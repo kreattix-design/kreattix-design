@@ -14,20 +14,22 @@ const Button: FC<ButtonProps> = (props) => {
     size,
     icon,
     iconPosition,
-    rounded,
+    pilled,
     disabled,
     type,
     shadow,
+    fluid,
     ...rest
   } = { ...useKreattixContext().Button, ...props }
   const classes = classnames(
     {
       [`btn`]: true,
       [`btn-disabled`]: disabled,
+      [`btn-fluid`]: fluid,
       [`btn-${variant}`]: variant,
       [`btn-${type}`]: type,
       [`btn-${size}`]: size,
-      [`btn-rounded`]: rounded,
+      [`btn-pilled`]: pilled,
       [`btn-with-icon`]: icon && children,
       [`btn-only-icon`]: icon && !children,
       [`btn-icon-${iconPosition}`]: icon && iconPosition,
@@ -51,7 +53,7 @@ const Button: FC<ButtonProps> = (props) => {
         children
       ) : (
         <>
-          {iconPosition === 'start' && iconComponent(icon)}
+          {iconPosition !== 'end' && iconComponent(icon)}
           {children && <span>{children}</span>}
           {iconPosition === 'end' && iconComponent(icon)}
         </>

@@ -1,33 +1,36 @@
 $white: #ffffff !default;
 $black: #000000 !default;
 
-$gray-100: lighten($black, 97%) !default;
-$gray-200: lighten($black, 90%) !default;
-$gray-300: lighten($black, 80%) !default;
-$gray-400: lighten($black, 70%) !default;
-$gray-500: lighten($black, 60%) !default;
-$gray-600: lighten($black, 50%) !default;
-$gray-700: lighten($black, 40%) !default;
-$gray-800: lighten($black, 30%) !default;
-$gray-900: lighten($black, 20%) !default;
+$grey-100: lighten($black, 97%) !default;
+$grey-200: lighten($black, 90%) !default;
+$grey-300: lighten($black, 80%) !default;
+$grey-400: lighten($black, 70%) !default;
+$grey-500: lighten($black, 60%) !default;
+$grey-600: lighten($black, 50%) !default;
+$grey-700: lighten($black, 40%) !default;
+$grey-800: lighten($black, 30%) !default;
+$grey-900: lighten($black, 20%) !default;
 
-$red: #ef4444 !default;
-$orange: #f97316 !default;
-$amber: #f59e0b !default;
-$yellow: #ffc107 !default;
-$lime: #84cc16 !default;
-$green: #22c55e !default;
-$deepGreen: #10b981 !default;
-$teal: #14b8a6 !default;
-$cyan: #06b6d4 !default;
-$lightBlue: #0ea5e9 !default;
-$blue: #3b82f6 !default;
-$indigo: #6366f1 !default;
+$red: #f44336 !default;
+$deepOrange: #ff5722 !default;
+$orange: #ff9800 !default;
+$amber: #ffc107 !default;
+$yellow: #ffeb3b !default;
+$lime: #cddc39 !default;
+$lightGreen: #8bc34a !default;
+$green: #4caf50 !default;
+$teal: #009688 !default;
+$cyan: #00bcd4 !default;
+$lightBlue: #03a9f4 !default;
+$blue: #2196f3 !default;
+$indigo: #3f51b5 !default;
 $violet: #8b5cf6 !default;
-$deepPurple: #a855f7 !default;
-$purple: #d946ef !default;
-$pink: #ec4899 !default;
+$deepPurple: #673ab7 !default;
+$purple: #9c27b0 !default;
+$pink: #e91e63 !default;
 $rose: #f43f5e !default;
+$brown: #795548 !default;
+$blueGrey: #607d8b !default;
 
 $red-100: lighten($red, 20%) !default;
 $red-200: lighten($red, 15%) !default;
@@ -38,6 +41,16 @@ $red-600: darken($red, 5%) !default;
 $red-700: darken($red, 10%) !default;
 $red-800: darken($red, 15%) !default;
 $red-900: darken($red, 20%) !default;
+
+$deepOrange-100: lighten($deepOrange, 20%) !default;
+$deepOrange-200: lighten($deepOrange, 15%) !default;
+$deepOrange-300: lighten($deepOrange, 10%) !default;
+$deepOrange-400: lighten($deepOrange, 5%) !default;
+$deepOrange-500: $deepOrange !default;
+$deepOrange-600: darken($deepOrange, 5%) !default;
+$deepOrange-700: darken($deepOrange, 10%) !default;
+$deepOrange-800: darken($deepOrange, 15%) !default;
+$deepOrange-900: darken($deepOrange, 20%) !default;
 
 $orange-100: lighten($orange, 20%) !default;
 $orange-200: lighten($orange, 15%) !default;
@@ -79,6 +92,16 @@ $lime-700: darken($lime, 10%) !default;
 $lime-800: darken($lime, 15%) !default;
 $lime-900: darken($lime, 20%) !default;
 
+$lightGreen-100: lighten($lightGreen, 20%) !default;
+$lightGreen-200: lighten($lightGreen, 15%) !default;
+$lightGreen-300: lighten($lightGreen, 10%) !default;
+$lightGreen-400: lighten($lightGreen, 5%) !default;
+$lightGreen-500: $lightGreen !default;
+$lightGreen-600: darken($lightGreen, 5%) !default;
+$lightGreen-700: darken($lightGreen, 10%) !default;
+$lightGreen-800: darken($lightGreen, 15%) !default;
+$lightGreen-900: darken($lightGreen, 20%) !default;
+
 $green-100: lighten($green, 20%) !default;
 $green-200: lighten($green, 15%) !default;
 $green-300: lighten($green, 10%) !default;
@@ -88,16 +111,6 @@ $green-600: darken($green, 5%) !default;
 $green-700: darken($green, 10%) !default;
 $green-800: darken($green, 15%) !default;
 $green-900: darken($green, 20%) !default;
-
-$deepGreen-100: lighten($deepGreen, 20%) !default;
-$deepGreen-200: lighten($deepGreen, 15%) !default;
-$deepGreen-300: lighten($deepGreen, 10%) !default;
-$deepGreen-400: lighten($deepGreen, 5%) !default;
-$deepGreen-500: $deepGreen !default;
-$deepGreen-600: darken($deepGreen, 5%) !default;
-$deepGreen-700: darken($deepGreen, 10%) !default;
-$deepGreen-800: darken($deepGreen, 15%) !default;
-$deepGreen-900: darken($deepGreen, 20%) !default;
 
 $teal-100: lighten($teal, 20%) !default;
 $teal-200: lighten($teal, 15%) !default;
@@ -199,14 +212,35 @@ $rose-700: darken($rose, 10%) !default;
 $rose-800: darken($rose, 15%) !default;
 $rose-900: darken($rose, 20%) !default;
 
+$brown-100: lighten($brown, 20%) !default;
+$brown-200: lighten($brown, 15%) !default;
+$brown-300: lighten($brown, 10%) !default;
+$brown-400: lighten($brown, 5%) !default;
+$brown-500: $brown !default;
+$brown-600: darken($brown, 5%) !default;
+$brown-700: darken($brown, 10%) !default;
+$brown-800: darken($brown, 15%) !default;
+$brown-900: darken($brown, 20%) !default;
+
+$blueGrey-100: lighten($blueGrey, 20%) !default;
+$blueGrey-200: lighten($blueGrey, 15%) !default;
+$blueGrey-300: lighten($blueGrey, 10%) !default;
+$blueGrey-400: lighten($blueGrey, 5%) !default;
+$blueGrey-500: $blueGrey !default;
+$blueGrey-600: darken($blueGrey, 5%) !default;
+$blueGrey-700: darken($blueGrey, 10%) !default;
+$blueGrey-800: darken($blueGrey, 15%) !default;
+$blueGrey-900: darken($blueGrey, 20%) !default;
+
 $colors: (
     "red": $red,
+    "deepOrange": $deepOrange,
     "orange": $orange,
     "amber": $amber,
     "yellow": $yellow,
     "lime": $lime,
+    "lightGreen": $lightGreen,
     "green": $green,
-    "deepGreen": $deepGreen,
     "teal": $teal,
     "cyan": $cyan,
     "lightBlue": $lightBlue,
@@ -217,6 +251,8 @@ $colors: (
     "purple": $purple,
     "pink": $pink,
     "rose": $rose,
+    "brown": $brown,
+    "blueGrey": $blueGrey,
 );
 
 $color-shades: (
@@ -229,6 +265,16 @@ $color-shades: (
     "red-700": $red-700,
     "red-800": $red-800,
     "red-900": $red-900,
+
+    "deepOrange-100": $deepOrange-100,
+    "deepOrange-200": $deepOrange-200,
+    "deepOrange-300": $deepOrange-300,
+    "deepOrange-400": $deepOrange-400,
+    "deepOrange-500": $deepOrange-500,
+    "deepOrange-600": $deepOrange-600,
+    "deepOrange-700": $deepOrange-700,
+    "deepOrange-800": $deepOrange-800,
+    "deepOrange-900": $deepOrange-900,
 
     "orange-100": $orange-100,
     "orange-200": $orange-200,
@@ -270,6 +316,16 @@ $color-shades: (
     "lime-800": $lime-800,
     "lime-900": $lime-900,
 
+    "lightGreen-100": $lightGreen-100,
+    "lightGreen-200": $lightGreen-200,
+    "lightGreen-300": $lightGreen-300,
+    "lightGreen-400": $lightGreen-400,
+    "lightGreen-500": $lightGreen-500,
+    "lightGreen-600": $lightGreen-600,
+    "lightGreen-700": $lightGreen-700,
+    "lightGreen-800": $lightGreen-800,
+    "lightGreen-900": $lightGreen-900,
+
     "green-100": $green-100,
     "green-200": $green-200,
     "green-300": $green-300,
@@ -279,16 +335,6 @@ $color-shades: (
     "green-700": $green-700,
     "green-800": $green-800,
     "green-900": $green-900,
-
-    "deepGreen-100": $deepGreen-100,
-    "deepGreen-200": $deepGreen-200,
-    "deepGreen-300": $deepGreen-300,
-    "deepGreen-400": $deepGreen-400,
-    "deepGreen-500": $deepGreen-500,
-    "deepGreen-600": $deepGreen-600,
-    "deepGreen-700": $deepGreen-700,
-    "deepGreen-800": $deepGreen-800,
-    "deepGreen-900": $deepGreen-900,
 
     "teal-100": $teal-100,
     "teal-200": $teal-200,
@@ -389,16 +435,36 @@ $color-shades: (
     "rose-700": $rose-700,
     "rose-800": $rose-800,
     "rose-900": $rose-900,
+
+    "brown-100": $brown-100,
+    "brown-200": $brown-200,
+    "brown-300": $brown-300,
+    "brown-400": $brown-400,
+    "brown-500": $brown-500,
+    "brown-600": $brown-600,
+    "brown-700": $brown-700,
+    "brown-800": $brown-800,
+    "brown-900": $brown-900,
+
+    "blueGrey-100": $blueGrey-100,
+    "blueGrey-200": $blueGrey-200,
+    "blueGrey-300": $blueGrey-300,
+    "blueGrey-400": $blueGrey-400,
+    "blueGrey-500": $blueGrey-500,
+    "blueGrey-600": $blueGrey-600,
+    "blueGrey-700": $blueGrey-700,
+    "blueGrey-800": $blueGrey-800,
+    "blueGrey-900": $blueGrey-900,
 );
 
-$grays: (
-    "gray-100": $gray-100,
-    "gray-200": $gray-200,
-    "gray-300": $gray-300,
-    "gray-400": $gray-400,
-    "gray-500": $gray-500,
-    "gray-600": $gray-600,
-    "gray-700": $gray-700,
-    "gray-800": $gray-800,
-    "gray-900": $gray-900,
+$greys: (
+    "grey-100": $grey-100,
+    "grey-200": $grey-200,
+    "grey-300": $grey-300,
+    "grey-400": $grey-400,
+    "grey-500": $grey-500,
+    "grey-600": $grey-600,
+    "grey-700": $grey-700,
+    "grey-800": $grey-800,
+    "grey-900": $grey-900,
 ) !default;
