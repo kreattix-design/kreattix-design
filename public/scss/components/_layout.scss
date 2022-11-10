@@ -1,0 +1,38 @@
+.#{$prefix}layout {
+    display: flex;
+    flex: auto;
+    flex-direction: column;
+    min-height: 0;
+    background-color: $layout-bg;
+
+    &:not(.#{$prefix}layout .#{$prefix}layout) {
+        height: 100vh;
+    }
+    &-has-sider {
+        flex-direction: row;
+    }
+
+    &-sider {
+        position: relative;
+        min-width: 0;
+        background: $layout-sider-bg;
+        overflow: auto;
+        @include transition();
+        @include sider-width();
+        &-collapsed {
+            @include sider-width($sider-collapsed-width);
+        }
+
+        &-content {
+            height: 100%;
+            overflow: hidden;
+        }
+    }
+    &-header {
+        height: $header-height;
+        padding: 0 $spacer;
+        color: $dark-text-color;
+        line-height: $header-height;
+        background: $white;
+    }
+}

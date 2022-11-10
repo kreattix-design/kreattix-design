@@ -2,17 +2,14 @@ import { KreattixContextProps } from './types'
 
 export const DefaultConfig: KreattixContextProps = {
   Box: {},
-  Icon: {
-    icon: 'Close',
-  },
   Button: {
+    type: 'solid',
+  },
+  ButtonGroup: {
     type: 'solid',
   },
   ButtonLink: {
     type: 'text',
-  },
-  ButtonGroup: {
-    type: 'solid',
   },
   Container: {},
   Divider: {
@@ -24,11 +21,14 @@ export const DefaultConfig: KreattixContextProps = {
   Grid: {
     gutter: 3,
   },
-  Text: {
-    ellipsis: false,
+  Icon: {
+    icon: 'Close',
   },
   Paragraph: {
     align: 'justify',
+    ellipsis: false,
+  },
+  Text: {
     ellipsis: false,
   },
   Title: {
