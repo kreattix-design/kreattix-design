@@ -6,7 +6,7 @@
     background-color: $layout-bg;
 
     &:not(.#{$prefix}layout .#{$prefix}layout) {
-        height: 100vh;
+        min-height: 100vh;
     }
     &-has-sider {
         flex-direction: row;
@@ -30,9 +30,25 @@
     }
     &-header {
         height: $header-height;
-        padding: 0 $spacer;
-        color: $dark-text-color;
+        padding: $header-padding-v $header-padding-h;
+        color: color-context($header-bg);
         line-height: $header-height;
-        background: $white;
+        background: $header-bg;
+    }
+
+    &-content {
+        padding: $content-padding-v $content-padding-h;
+        background: $content-bg;
+        flex: auto;
+        display: flex;
+
+        &-body {
+            flex: auto;
+            &-boxed {
+                padding: $content-padding-v $content-padding-h;
+                background-color: $content-body-bg;
+                @include border-radius();
+            }
+        }
     }
 }
