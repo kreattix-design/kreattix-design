@@ -1,6 +1,7 @@
 import {
   Box,
   Button,
+  Colors,
   Container,
   Divider,
   Grid,
@@ -117,7 +118,15 @@ function App() {
               <Grid>
                 <Grid.Item>
                   <Text.Title level={4} variant="danger">
-                    Vite <Icon icon="Plus" size="small" /> React
+                    Vite{' '}
+                    <Icon
+                      icon="Plus"
+                      color={Colors.pink}
+                      type="toned"
+                      shape="square"
+                      size="large"
+                    />
+                    React
                   </Text.Title>
                 </Grid.Item>
                 <Grid.Item>

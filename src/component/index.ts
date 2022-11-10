@@ -1,5 +1,6 @@
 export { default as Box } from './box'
 export { default as Button } from './button'
+export { default as Colors } from './colors'
 export { default as Container } from './container'
 export { default as Divider } from './divider'
 export { default as Grid } from './grid'
