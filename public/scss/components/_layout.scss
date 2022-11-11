@@ -21,8 +21,16 @@
         @include sider-width();
         &-collapsed {
             @include sider-width($sider-collapsed-width);
+            .#{$prefix}layout-header {
+                padding: $header-padding-v * 0.5 $header-padding-h * 0.5;
+            }
         }
 
+        .#{$prefix}layout-header {
+            background: $layout-sider-bg;
+            color: color-contrast($layout-sider-mode);
+            border-bottom: 1px solid rgba(color-contrast($layout-sider-mode), 0.2);
+        }
         &-content {
             height: 100%;
             overflow: hidden;
@@ -31,9 +39,12 @@
     &-header {
         height: $header-height;
         padding: $header-padding-v $header-padding-h;
-        color: color-context($header-bg);
-        line-height: $header-height;
+        color: color-contrast($header-bg);
         background: $header-bg;
+        display: flex;
+        align-items: center;
+        gap: $header-gutter;
+        @include transition();
     }
 
     &-content {

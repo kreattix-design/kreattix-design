@@ -242,14 +242,16 @@ $btn-disabled-text-color: $grey-500 !default;
 $btn-icon-margin: $spacer * 0.3 !default;
 
 $layout-bg: $grey-200 !default;
-$layout-sider-bg: $grey-900 !default;
 $header-height: 64px !default;
 $header-padding-v: 0 !default;
 $header-padding-h: $spacer !default;
 $header-bg: $white !default;
+$header-gutter: $spacer !default;
 $content-padding-v: $spacer !default;
 $content-padding-h: $spacer !default;
 $content-bg: $grey-200 !default;
 $content-body-bg: $white !default;
+$layout-sider-bg: $blueGrey-900 !default;
+$layout-sider-mode: $dark !default; // $dark, $light
 $sider-width: 250px !default;
 $sider-collapsed-width: 50px !default;
