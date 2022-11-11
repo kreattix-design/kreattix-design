@@ -1,6 +1,6 @@
 import { ForwardRefExoticComponent, ReactNode } from 'react'
 
-import { TextAlignments,Variants } from '../../types'
+import { TextAlignments, Variants } from '../../types'
 import Paragraph from './Paragraph'
 import Title from './Title'
 
