@@ -11,7 +11,7 @@ const Box: FC<BoxProps> = (props) => {
     ...props,
   }
 
-  const isFlex = align || justify || direction || flex || (gutter && gutter != 0)
+  const isFlex = align || justify || direction || flex || gutter
 
   const responsiveClasses: { [key: string]: boolean } = {}
   if (gutter && typeof gutter === 'object') {
