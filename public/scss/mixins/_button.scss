@@ -1,83 +1,86 @@
 @mixin button-shadow-scss($color, $force: $enable-theme-shadow) {
-    &.#{$prefix}btn-solid,
-    &.#{$prefix}btn-outlined {
-        &:hover {
-            @include box-shadow($btn-box-shadow, $color, $force);
-        }
-        &:active {
-            @include box-shadow($btn-box-shadow, transparent, $force);
-        }
+  &.#{$prefix}btn-solid,
+  &.#{$prefix}btn-outlined {
+    &:hover {
+      @include box-shadow($btn-box-shadow, $color, $force);
     }
+    &:active {
+      @include box-shadow($btn-box-shadow, transparent, $force);
+    }
+  }
 }
 
 @mixin button-shadow($color: $box-shadow-color) {
-    @if ($enable-color-shadow != true) {
-        $color: $box-shadow-color;
+  @if ($enable-color-shadow != true) {
+    $color: $box-shadow-color;
+  }
+  // @debug $enable-theme-shadow;
+  @if ($enable-theme-shadow == true) {
+    @include button-shadow-scss($color);
+  } @else {
+    &.#{$prefix}btn-shadow {
+      @include button-shadow-scss($color, true);
     }
-    // @debug $enable-theme-shadow;
-    @if ($enable-theme-shadow == true) {
-        @include button-shadow-scss($color);
-    } @else {
-        &.#{$prefix}btn-shadow {
-            @include button-shadow-scss($color, true);
-        }
-    }
+  }
 }
 
 @mixin button-effects($color, $value) {
-    &.#{$prefix}btn-solid,
-    &.#{$prefix}btn-outlined {
-        &:hover,
-        &:focus {
-            color: color-contrast($value);
-            background-color: var(--#{$prefix}#{$color}-hover);
-            border-color: var(--#{$prefix}#{$color}-hover);
-        }
-        &:active {
-            color: color-contrast($value);
-            background-color: var(--#{$prefix}#{$color}-active);
-            border-color: var(--#{$prefix}#{$color}-active);
-        }
+  &.#{$prefix}btn-solid,
+  &.#{$prefix}btn-outlined {
+    &:hover,
+    &:focus {
+      color: color-contrast($value);
+      background-color: var(--#{$prefix}#{$color}-hover);
+      border-color: var(--#{$prefix}#{$color}-hover);
     }
-    &.#{$prefix}btn-text {
-        &:hover,
-        &:focus {
-            background-color: rgba(var(--#{$prefix}#{$color}-rgb), 0.1);
-        }
+    &:active {
+      color: color-contrast($value);
+      background-color: var(--#{$prefix}#{$color}-active);
+      border-color: var(--#{$prefix}#{$color}-active);
     }
-    &.#{$prefix}btn-text,
-    &.#{$prefix}btn-plain {
-        &:hover,
-        &:focus {
-            color: var(--#{$prefix}#{$color}-hover);
-            border-color: var(--#{$prefix}#{$color}-hover);
-        }
-        &:active {
-            color: var(--#{$prefix}#{$color}-active);
-            border-color: var(--#{$prefix}#{$color}-active);
-        }
+  }
+  &.#{$prefix}btn-text {
+    &:hover,
+    &:focus {
+      background-color: rgba(var(--#{$prefix}#{$color}-rgb), 0.1);
     }
+    &:active {
+      background-color: rgba(var(--#{$prefix}#{$color}-rgb), 0.2);
+    }
+  }
+  &.#{$prefix}btn-text,
+  &.#{$prefix}btn-plain {
+    &:hover,
+    &:focus {
+      color: var(--#{$prefix}#{$color}-hover);
+      border-color: var(--#{$prefix}#{$color}-hover);
+    }
+    &:active {
+      color: var(--#{$prefix}#{$color}-active);
+      border-color: var(--#{$prefix}#{$color}-active);
+    }
+  }
 }
 
 @mixin button-variants($variant: $theme-colors) {
-    @each $color, $value in $theme-colors {
-        &.#{$prefix}btn-#{$color} {
-            &.#{$prefix}btn-solid {
-                border-color: $value;
-                background-color: $value;
-                color: color-contrast($value);
-                @include button-shadow(rgb(var(--#{$prefix}#{$color}-rgb), $shadow-opacity));
-            }
-            &.#{$prefix}btn-outlined {
-                border-color: $value;
-                color: $value;
-                @include button-shadow(rgb(var(--#{$prefix}#{$color}-rgb), $shadow-opacity));
-            }
-            &.#{$prefix}btn-text,
-            &.#{$prefix}btn-plain {
-                color: $value;
-            }
-            @include button-effects($color, $value);
-        }
+  @each $color, $value in $theme-colors {
+    &.#{$prefix}btn-#{$color} {
+      &.#{$prefix}btn-solid {
+        border-color: $value;
+        background-color: $value;
+        color: color-contrast($value);
+        @include button-shadow(rgb(var(--#{$prefix}#{$color}-rgb), $shadow-opacity));
+      }
+      &.#{$prefix}btn-outlined {
+        border-color: $value;
+        color: $value;
+        @include button-shadow(rgb(var(--#{$prefix}#{$color}-rgb), $shadow-opacity));
+      }
+      &.#{$prefix}btn-text,
+      &.#{$prefix}btn-plain {
+        color: $value;
+      }
+      @include button-effects($color, $value);
     }
+  }
 }

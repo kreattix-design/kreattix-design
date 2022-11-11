@@ -11,7 +11,7 @@ function App() {
           <Layout.Header targetSider="main-sider">test</Layout.Header>
           <Layout.Content boxed>
             <Box gutter={3}>
-              <Button variant="primary" pilled icon="ArrowLeft">
+              <Button variant="danger" type="text" pilled icon="ArrowLeft">
                 Button
               </Button>
               <Icon icon="Close" shape="square" type="toned" color={Colors.primary} />
