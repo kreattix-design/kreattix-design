@@ -12,10 +12,7 @@ const Header: FC<HeaderProp> = (props) => {
   } = useKreattixAppContext()
 
   const siderToggler = () => {
-    if (targetSider) {
-      const selectedSider = getSider(targetSider)
-      selectedSider?.toggleSider()
-    }
+    if (targetSider) getSider(targetSider)?.toggleSider()
   }
 
   const classes = classnames(`layout-header`, className, true)

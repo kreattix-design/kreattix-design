@@ -5,6 +5,6 @@ import { GridCompoundProps } from './types'
 const Grid = _Grid as GridCompoundProps
 Grid.Item = GridItem
 
-export { default as GridItem } from './GridItem'
+export { GridItem }
 export * from './types'
 export default Grid

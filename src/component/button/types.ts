@@ -8,40 +8,30 @@ import ButtonLink from './ButtonLink'
 export type IconPositions = 'start' | 'end'
 export type ButtonTypes = 'solid' | 'outlined' | 'text'
 
-export interface ButtonProps extends Omit<HTMLAttributes<HTMLButtonElement>, 'type'> {
+export interface DefaultButtonProps {
   type?: ButtonTypes
   variant?: Variants
   size?: Sizes
   pilled?: boolean
+  icon?: IconNames
+  iconPosition?: IconPositions
+  shadow?: boolean
+  fluid?: boolean
+}
+
+export interface ButtonProps
+  extends Omit<HTMLAttributes<HTMLButtonElement>, 'type'>,
+    DefaultButtonProps {
   disabled?: boolean
-  icon?: IconNames
-  iconPosition?: IconPositions
-  shadow?: boolean
-  fluid?: boolean
 }
 
-export interface ButtonLinkProps extends Omit<HTMLAttributes<HTMLAnchorElement>, 'type'> {
-  type?: ButtonTypes
-  variant?: Variants
-  size?: Sizes
-  pilled?: boolean
-  icon?: IconNames
-  iconPosition?: IconPositions
-  shadow?: boolean
-  fluid?: boolean
-}
+export interface ButtonLinkProps
+  extends Omit<HTMLAttributes<HTMLAnchorElement>, 'type'>,
+    DefaultButtonProps {}
 
-export interface ButtonGroupProps {
+export interface ButtonGroupProps extends DefaultButtonProps {
   children?: ReactNode
   className?: string
-  type?: ButtonTypes
-  variant?: Variants
-  size?: Sizes
-  pilled?: boolean
-  icon?: IconNames
-  iconPosition?: IconPositions
-  shadow?: boolean
-  fluid?: boolean
 }
 
 export interface ButtonCompoundProps extends ForwardRefExoticComponent<ButtonProps> {

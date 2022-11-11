@@ -39,13 +39,7 @@ const ButtonLink: FC<ButtonLinkProps> = (props) => {
     className,
     true,
   )
-  const iconClasses = classnames(
-    {
-      [`btn-icon`]: true,
-    },
-    '',
-    true,
-  )
+  const iconClasses = classnames(`btn-icon`, '', true)
   const iconComponent = (icon: IconNames) => <Icon icon={icon} className={iconClasses} />
 
   return (

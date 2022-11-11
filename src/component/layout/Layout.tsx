@@ -1,12 +1,7 @@
 import { createContext, FC, useMemo } from 'react'
 
 import { classnames } from '../../utils'
-import { LayoutProp } from './types'
-
-export interface LayoutContextProps {
-  addSider: (siderKey: string) => void
-  removeSider: (siderKey: string) => void
-}
+import { LayoutContextProps, LayoutProp } from './types'
 
 export const LayoutContext = createContext<LayoutContextProps>({
   addSider: () => null,

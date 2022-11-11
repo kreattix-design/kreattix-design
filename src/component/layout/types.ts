@@ -4,6 +4,11 @@ import Content from './Content'
 import Header from './Header'
 import Sider from './Sider'
 
+export interface LayoutContextProps {
+  addSider: (siderKey: string) => void
+  removeSider: (siderKey: string) => void
+}
+
 export interface LayoutProp {
   children?: ReactNode
   className?: string
