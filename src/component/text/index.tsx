@@ -7,7 +7,6 @@ const Text = _Text as TextCompoundProps
 Text.Paragraph = Paragraph
 Text.Title = Title
 
-export { default as Paragraph } from './Paragraph'
-export { default as Title } from './Title'
+export { Paragraph, Title }
 export * from './types'
 export default Text

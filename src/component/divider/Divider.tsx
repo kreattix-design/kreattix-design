@@ -21,13 +21,7 @@ const Divider: FC<DividerProps> = (props) => {
     className,
     true,
   )
-  const innerTextClasses = classnames(
-    {
-      [`divider-inner-text`]: true,
-    },
-    '',
-    true,
-  )
+  const innerTextClasses = classnames(`divider-inner-text`, '', true)
   return (
     <div className={classes}>
       {direction === 'horizontal' ? <div className={innerTextClasses}>{children}</div> : null}

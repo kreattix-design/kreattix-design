@@ -21,13 +21,7 @@ const ButtonGroup: FC<ButtonGroupProps> = (props) => {
     ...useKreattixContext().ButtonGroup,
     ...props,
   }
-  const classes = classnames(
-    {
-      [`btn-group`]: true,
-    },
-    className,
-    true,
-  )
+  const classes = classnames(`btn-group`, className, true)
   const childrenWithProps = Children.map(children, (child) => {
     if (isValidElement(child)) {
       return cloneElement(child, {

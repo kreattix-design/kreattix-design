@@ -1,6 +1,6 @@
 import { env } from './env'
 
-export const getPrefix = (prefix: string) => prefix || env('KREATTIX_PREFIX') || 'kd'
+export const getPrefix = (prefix?: string) => prefix || env('KREATTIX_PREFIX') || 'kd'
 
 export const joinClasses = (classes: string[] = []) => classes.join(' ').trim()
 

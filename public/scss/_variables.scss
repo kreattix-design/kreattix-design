@@ -67,7 +67,7 @@ $font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mon
 $font-family: var(--#{$prefix}font-sans-serif) !default;
 $font-family-code: var(--#{$prefix}font-monospace) !default;
 
-$root-font-size: 16px;
+$root-font-size: 16px !default;
 
 $font-size: 1rem !default;
 $font-size-sm: $font-size * 0.75 !default;
@@ -141,7 +141,7 @@ $ease-out-quint: cubic-bezier(0.23, 1, 0.32, 1) !default;
 $ease-in-quint: cubic-bezier(0.755, 0.05, 0.855, 0.06) !default;
 $ease-in-out-quint: cubic-bezier(0.86, 0, 0.07, 1) !default;
 
-$transition: all 0.2s $ease-in-out;
+$transition: all 0.2s $ease-in-out !default;
 
 $body-bg: $grey-100 !default;
 $body-color: $text-color !default;
@@ -169,33 +169,33 @@ $container-max-widths: (
   xxl: 1320px,
 ) !default;
 
-$mark-background-color: $yellow-200;
-$mark-padding: 0;
+$mark-background-color: $yellow-200 !default;
+$mark-padding: 0 !default;
 
-$code-margin: 0 0.2em;
-$code-padding: 0.2em 0.4em 0.1em;
-$code-font-size: 85%;
-$code-background: $grey-100;
-$code-border: 1px solid $grey-200;
-$code-border-radius: 3px;
+$code-margin: 0 0.2em !default;
+$code-padding: 0.2em 0.4em 0.1em !default;
+$code-font-size: 85% !default;
+$code-background: $grey-100 !default;
+$code-border: 1px solid $grey-200 !default;
+$code-border-radius: 3px !default;
 
-$kbd-margin: 0 0.2em;
-$kbd-padding: 0.15em 0.4em 0.1em;
-$kbd-font-size: 90%;
-$kbd-background: $grey-100;
-$kbd-border: 1px solid $grey-200;
-$kbd-border-bottom-width: 2px;
-$kbd-border-radius: 3px;
+$kbd-margin: 0 0.2em !default;
+$kbd-padding: 0.15em 0.4em 0.1em !default;
+$kbd-font-size: 90% !default;
+$kbd-background: $grey-100 !default;
+$kbd-border: 1px solid $grey-200 !default;
+$kbd-border-bottom-width: 2px !default;
+$kbd-border-radius: 3px !default;
 
 $paragraph-margin-top: 0 !default;
 $paragraph-margin-bottom: $spacer * 0.5 !default;
 
-$h1-font-size: $font-size * 3;
-$h2-font-size: $font-size * 2.71;
-$h3-font-size: $font-size * 2.14;
-$h4-font-size: $font-size * 1.71;
-$h5-font-size: $font-size * 1.42;
-$h6-font-size: $font-size * 1.14;
+$h1-font-size: $font-size * 3 !default;
+$h2-font-size: $font-size * 2.71 !default;
+$h3-font-size: $font-size * 2.14 !default;
+$h4-font-size: $font-size * 1.71 !default;
+$h5-font-size: $font-size * 1.42 !default;
+$h6-font-size: $font-size * 1.14 !default;
 
 $font-sizes: (
   1: $h1-font-size,
@@ -240,3 +240,18 @@ $btn-disabled-background-color: $grey-200 !default;
 $btn-disabled-border-color: $grey-500 !default;
 $btn-disabled-text-color: $grey-500 !default;
 $btn-icon-margin: $spacer * 0.3 !default;
+
+$layout-bg: $grey-200 !default;
+$header-height: 64px !default;
+$header-padding-v: 0 !default;
+$header-padding-h: $spacer !default;
+$header-bg: $white !default;
+$header-gutter: $spacer !default;
+$content-padding-v: $spacer !default;
+$content-padding-h: $spacer !default;
+$content-bg: $grey-200 !default;
+$content-body-bg: $white !default;
+$layout-sider-bg: $blueGrey-900 !default;
+$layout-sider-mode: $dark !default; // $dark, $light
+$sider-width: 250px !default;
+$sider-collapsed-width: 50px !default;

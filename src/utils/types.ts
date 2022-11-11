@@ -14,6 +14,7 @@ export type FlexDirections = 'horizontal' | 'vertical'
 export type BorderStyles = 'solid' | 'dashed' | 'dotted'
 export type AlignItems = 'start' | 'center' | 'end'
 export type JustifyContents = 'start' | 'center' | 'end' | 'around' | 'between' | 'evenly'
+export type Orientations = 'left' | 'center' | 'right'
 export type Gutters = 0 | 1 | 2 | 3 | 4 | 5
 export type ResponsiveGutters = {
   sm?: Gutters

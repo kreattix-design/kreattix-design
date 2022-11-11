@@ -2,10 +2,14 @@ import { FC } from 'react'
 
 import { ResponsiveGutters } from '../../types'
 import { classnames } from '../../utils'
+import { useKreattixContext } from '../provider'
 import { GridProps } from './types'
 
 const Grid: FC<GridProps> = (props) => {
-  const { children, className, align, justify, direction, gutter, ...rest } = props
+  const { children, className, align, justify, direction, gutter, ...rest } = {
+    ...useKreattixContext().Grid,
+    ...props,
+  }
   const responsiveClasses: { [key: string]: boolean } = {}
   if (gutter && typeof gutter === 'object') {
     Object.keys(gutter).forEach((item) => {

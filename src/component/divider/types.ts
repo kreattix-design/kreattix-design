@@ -1,6 +1,6 @@
 import { ReactNode } from 'react'
 
-import { BorderStyles, FlexDirections } from '../../types'
+import { BorderStyles, FlexDirections, Orientations } from '../../types'
 
 export interface DividerProps {
   children: ReactNode
@@ -8,5 +8,5 @@ export interface DividerProps {
   direction?: FlexDirections
   type?: BorderStyles
   plain?: boolean
-  orientation?: 'left' | 'center' | 'right'
+  orientation?: Orientations
 }
