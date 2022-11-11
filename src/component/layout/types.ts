@@ -13,6 +13,7 @@ export interface LayoutProp {
 export interface HeaderProp {
   children?: ReactNode
   className?: string
+  targetSider?: string
 }
 
 export interface ContentProp {

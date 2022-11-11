@@ -1,4 +1,4 @@
-import { createContext, FC, useMemo, useState } from 'react'
+import { createContext, FC, useMemo } from 'react'
 
 import { classnames } from '../../utils'
 import { LayoutProp } from './types'
@@ -16,7 +16,8 @@ export const LayoutContext = createContext<LayoutContextProps>({
 const Layout: FC<LayoutProp> = (props) => {
   const { children, className, hasSider } = props
 
-  const [siders, setSiders] = useState<string[]>([])
+  let siders: string[] = []
+  const setSiders = (sider: string) => (siders = [...siders, sider])
 
   const classes = classnames(
     {
@@ -29,10 +30,10 @@ const Layout: FC<LayoutProp> = (props) => {
 
   const contextValue = useMemo<LayoutContextProps>(
     () => ({
-      addSider: (siderKey) => setSiders((prev) => [...prev, siderKey]),
+      addSider: setSiders,
       removeSider: (siderKey) => siders.filter((key) => key !== siderKey),
     }),
-    [],
+    [siders],
   )
 
   return (

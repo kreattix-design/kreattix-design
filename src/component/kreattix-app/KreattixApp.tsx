@@ -1,32 +1,33 @@
-import { createContext, FC, useMemo, useState } from 'react'
+import { createContext, FC, useContext, useMemo } from 'react'
 
 import { Provider } from '../provider'
 import { KreattixAppContextProps, KreattixAppProps, SiderItemProps } from './types'
 
 const KreattixAppContext = createContext<KreattixAppContextProps>({
   sider: {
-    list: [],
     getSider: () => undefined,
     addSider: () => null,
     removeSider: () => null,
   },
 })
 
+export const useKreattixAppContext = () => useContext(KreattixAppContext)
+
 const KreattixApp: FC<KreattixAppProps> = (props) => {
   const { children, appConfig = {} } = { ...props }
 
-  const [siders, setSiders] = useState<SiderItemProps[]>([])
+  let siders: SiderItemProps[] = []
+  const setSiders = (sider: SiderItemProps) => (siders = [...siders, sider])
 
   const contextValue = useMemo<KreattixAppContextProps>(
     () => ({
       sider: {
-        list: [],
         getSider: (siderKey) => siders.find((sider) => sider.siderKey === siderKey),
-        addSider: (sider) => setSiders((prev) => [...prev, sider]),
+        addSider: (sider) => setSiders(sider),
         removeSider: (siderKey) => siders.filter((sider) => sider.siderKey !== siderKey),
       },
     }),
-    [],
+    [siders],
   )
 
   return (
