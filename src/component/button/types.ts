@@ -9,6 +9,8 @@ export type IconPositions = 'start' | 'end'
 export type ButtonTypes = 'solid' | 'outlined' | 'text'
 
 export interface DefaultButtonProps {
+  children?: ReactNode
+  className?: string
   type?: ButtonTypes
   variant?: Variants
   size?: Sizes
@@ -19,11 +21,11 @@ export interface DefaultButtonProps {
   fluid?: boolean
 }
 
-export interface ButtonProps extends DOMAttributes<HTMLButtonElement>, DefaultButtonProps {
+export interface ButtonProps extends DefaultButtonProps, DOMAttributes<HTMLButtonElement> {
   disabled?: boolean
 }
 
-export interface ButtonLinkProps extends DOMAttributes<HTMLAnchorElement>, DefaultButtonProps {}
+export interface ButtonLinkProps extends DefaultButtonProps, DOMAttributes<HTMLAnchorElement> {}
 
 export interface ButtonGroupProps extends DefaultButtonProps {
   children?: ReactNode
