@@ -1,3 +1,4 @@
+import { IconNames } from 'kreattix-design-icons/dist/types'
 import { ForwardRefExoticComponent, ReactNode } from 'react'
 
 import Content from './Content'
@@ -15,10 +16,15 @@ export interface LayoutProp {
   hasSider?: boolean
 }
 
-export interface HeaderProp {
+export interface SiderControllerProps {
+  icon?: IconNames | ReactNode
+  siderKey: string
+}
+
+export interface HeaderProps {
   children?: ReactNode
   className?: string
-  targetSider?: string
+  siderController?: SiderControllerProps
 }
 
 export interface ContentProp {

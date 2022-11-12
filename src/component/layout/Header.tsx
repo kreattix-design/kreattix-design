@@ -1,25 +1,44 @@
-import { FC } from 'react'
+import { IconNames } from 'kreattix-design-icons/dist/types'
+import { cloneElement, FC, isValidElement } from 'react'
 
 import { classnames } from '../../utils'
 import Icon from '../icon'
 import { useKreattixAppContext } from '../kreattix-app/KreattixApp'
-import { HeaderProp } from './types'
+import { HeaderProps } from './types'
 
-const Header: FC<HeaderProp> = (props) => {
-  const { children, className, targetSider } = props
+const Header: FC<HeaderProps> = (props) => {
+  const { children, className, siderController } = props
   const {
     sider: { getSider },
   } = useKreattixAppContext()
 
+  const siderToggleHandler = () => {
+    getSider(siderController?.siderKey || '')?.toggleSider()
+  }
+
   const siderToggler = () => {
-    if (targetSider) getSider(targetSider)?.toggleSider()
+    let iconName = 'MenuLeft' as IconNames
+    if (siderController?.icon) {
+      if (typeof siderController.icon === 'string') {
+        iconName = siderController.icon as IconNames
+      } else if (isValidElement(siderController.icon)) {
+        const iconProps = siderController.icon.props
+        const onClick = () => {
+          if (iconProps.onClick) iconProps.onClick()
+          siderToggleHandler()
+        }
+        return cloneElement(siderController.icon, { ...iconProps, onClick })
+      }
+    }
+
+    return siderController && <Icon icon={iconName} onClick={siderToggleHandler} />
   }
 
   const classes = classnames(`layout-header`, className, true)
 
   return (
     <header className={classes}>
-      <Icon icon="ArrowLeft" onClick={siderToggler} />
+      {siderToggler()}
       {children}
     </header>
   )
