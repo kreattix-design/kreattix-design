@@ -1,5 +1,5 @@
 import { IconNames } from 'kreattix-design-icons/dist/types'
-import { ForwardRefExoticComponent, ReactNode } from 'react'
+import { DOMAttributes, ForwardRefExoticComponent, ReactNode } from 'react'
 
 import Content from './Content'
 import Header from './Header'
@@ -10,7 +10,7 @@ export interface LayoutContextProps {
   removeSider: (siderKey: string) => void
 }
 
-export interface LayoutProp {
+export interface LayoutProps extends DOMAttributes<HTMLDivElement> {
   children?: ReactNode
   className?: string
   hasSider?: boolean
@@ -21,25 +21,25 @@ export interface SiderControllerProps {
   siderKey: string
 }
 
-export interface HeaderProps {
+export interface HeaderProps extends DOMAttributes<HTMLDivElement> {
   children?: ReactNode
   className?: string
   siderController?: SiderControllerProps
 }
 
-export interface ContentProp {
+export interface ContentProps extends DOMAttributes<HTMLDivElement> {
   children?: ReactNode
   className?: string
   boxed?: boolean
 }
 
-export interface SiderProps {
+export interface SiderProps extends DOMAttributes<HTMLDivElement> {
   children?: ReactNode
   className?: string
   siderKey: string
 }
 
-export interface LayoutCompoundProps extends ForwardRefExoticComponent<LayoutProp> {
+export interface LayoutCompoundProps extends ForwardRefExoticComponent<LayoutProps> {
   Sider: typeof Sider
   Header: typeof Header
   Content: typeof Content

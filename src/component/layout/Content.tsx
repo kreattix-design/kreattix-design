@@ -1,9 +1,9 @@
 import { FC } from 'react'
 
 import { classnames } from '../../utils'
-import { ContentProp } from './types'
+import { ContentProps } from './types'
 
-const Content: FC<ContentProp> = (props) => {
+const Content: FC<ContentProps> = (props) => {
   const { children, className, boxed } = props
 
   const classes = classnames(`layout-content`, className, true)

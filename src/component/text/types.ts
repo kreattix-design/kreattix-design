@@ -1,4 +1,4 @@
-import { ForwardRefExoticComponent, ReactNode } from 'react'
+import { DOMAttributes, ForwardRefExoticComponent, ReactNode } from 'react'
 
 import { TextAlignments, Variants } from '../../types'
 import Paragraph from './Paragraph'
@@ -22,16 +22,16 @@ export interface TextBaseProps extends TextWrapperProps {
   ellipsis?: boolean
 }
 
-export interface TextProps extends TextBaseProps {
+export interface TextProps extends DOMAttributes<HTMLSpanElement>, TextBaseProps {
   disabled?: boolean
 }
 
-export interface ParagraphProps extends TextBaseProps {
+export interface ParagraphProps extends DOMAttributes<HTMLParagraphElement>, TextBaseProps {
   align?: TextAlignments
 }
 
 export type TitleLevels = 1 | 2 | 3 | 4 | 5 | 6
-export interface TitleProps extends TextBaseProps {
+export interface TitleProps extends DOMAttributes<HTMLHeadingElement>, TextBaseProps {
   level?: TitleLevels
   align?: TextAlignments
 }

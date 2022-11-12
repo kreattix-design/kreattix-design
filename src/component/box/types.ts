@@ -1,4 +1,4 @@
-import { ReactNode } from 'react'
+import { DOMAttributes, ReactNode } from 'react'
 
 import {
   AlignItems,
@@ -10,7 +10,7 @@ import {
 
 export type BoxSizes = 'fullscreen' | 'cover' | 'fill-container' | 'hug-content'
 
-export interface BoxProps {
+export interface BoxProps extends DOMAttributes<HTMLDivElement> {
   children?: ReactNode
   className?: string
   align?: AlignItems

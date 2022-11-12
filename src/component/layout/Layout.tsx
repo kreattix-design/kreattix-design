@@ -1,14 +1,14 @@
 import { createContext, FC, useMemo } from 'react'
 
 import { classnames } from '../../utils'
-import { LayoutContextProps, LayoutProp } from './types'
+import { LayoutContextProps, LayoutProps } from './types'
 
 export const LayoutContext = createContext<LayoutContextProps>({
   addSider: () => null,
   removeSider: () => null,
 })
 
-const Layout: FC<LayoutProp> = (props) => {
+const Layout: FC<LayoutProps> = (props) => {
   const { children, className, hasSider } = props
 
   let siders: string[] = []
