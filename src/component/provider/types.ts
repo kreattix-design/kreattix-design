@@ -1,3 +1,4 @@
+import { IconNames } from 'kreattix-design-icons/dist/types'
 import { ReactNode } from 'react'
 
 import {
@@ -43,6 +44,7 @@ export interface KreattixContextProps {
   Paragraph?: Pick<ParagraphProps, 'variant' | 'ellipsis' | 'align'>
   Text?: Pick<TextProps, 'variant' | 'ellipsis' | 'disabled'>
   Title?: Pick<TitleProps, 'variant' | 'ellipsis' | 'align' | 'level'>
+  LayoutHeader?: { iconName: IconNames }
 }
 
 export interface ProviderProps {

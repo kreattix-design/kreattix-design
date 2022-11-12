@@ -35,4 +35,7 @@ export const DefaultConfig: KreattixContextProps = {
     level: 1,
     ellipsis: false,
   },
+  LayoutHeader: {
+    iconName: 'MenuLeft',
+  },
 }
