@@ -38,7 +38,6 @@ export const DefaultConfig: KreattixContextProps = {
   LayoutHeader: {
     siderController: {
       icon: 'MenuLeft',
-      accentIcon: 'MenuRight',
     },
   },
   LayoutSider: {
