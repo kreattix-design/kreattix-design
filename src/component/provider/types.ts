@@ -11,6 +11,7 @@ import {
   HeaderProps,
   IconProps,
   ParagraphProps,
+  SiderControllerProps,
   SiderProps,
   TextProps,
   TitleProps,
@@ -47,6 +48,10 @@ export interface KreattixContextProps {
   Title?: Pick<TitleProps, 'variant' | 'ellipsis' | 'align' | 'level'>
   LayoutHeader?: Pick<HeaderProps, 'siderController'>
   LayoutSider?: Pick<SiderProps, 'collapsed'>
+  SiderController?: Pick<
+    SiderControllerProps,
+    'accentIcon' | 'accentIconComponent' | 'icon' | 'iconComponent' | 'siderKey'
+  >
 }
 
 export interface ProviderProps {

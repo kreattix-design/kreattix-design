@@ -4,16 +4,14 @@ import { cloneElement, FC, isValidElement, useState } from 'react'
 import { classnames } from '../../utils'
 import Icon from '../icon'
 import { useKreattixAppContext } from '../kreattix-app/KreattixApp'
+import { useKreattixContext } from '../provider'
 import { SiderControllerProps } from './types'
 
-const SiderController: FC<SiderControllerProps> = ({
-  className,
-  siderKey,
-  icon,
-  accentIcon,
-  iconComponent,
-  accentIconComponent,
-}) => {
+const SiderController: FC<SiderControllerProps> = (props) => {
+  const { className, siderKey, icon, accentIcon, iconComponent, accentIconComponent } = {
+    ...useKreattixContext().SiderController,
+    ...props,
+  }
   const { sider } = useKreattixAppContext()
 
   const [activeIcon, setActiveIcon] = useState<boolean>(true)
