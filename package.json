@@ -22,7 +22,7 @@
     "react-dom": "16.8.0 || >=17.x"
   },
   "dependencies": {
-    "kreattix-design-icons": "^0.3.3",
+    "kreattix-design-icons": "^0.3.6",
     "lodash": "^4.17.21"
   },
   "devDependencies": {

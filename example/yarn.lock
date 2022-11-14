@@ -1196,9 +1196,9 @@
 
 "kreattix-design@file:..":
   "resolved" "file:.."
-  "version" "0.3.9"
+  "version" "0.4.2"
   dependencies:
-    "kreattix-design-icons" "^0.3.3"
+    "kreattix-design-icons" "^0.3.6"
     "lodash" "^4.17.21"
 
 "lines-and-columns@^1.1.6":
