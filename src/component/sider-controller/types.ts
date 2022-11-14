@@ -3,7 +3,9 @@ import { ReactNode } from 'react'
 
 export interface SiderControllerProps {
   className?: string
-  icon?: IconNames | ReactNode
-  accentIcon?: IconNames | ReactNode
+  icon?: IconNames
+  accentIcon?: IconNames
+  iconComponent?: ReactNode
+  accentIconComponent?: ReactNode
   siderKey?: string
 }

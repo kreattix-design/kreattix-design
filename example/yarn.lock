@@ -1194,9 +1194,15 @@
   "resolved" "https://registry.npmjs.org/kind-of/-/kind-of-6.0.3.tgz"
   "version" "6.0.3"
 
-"kreattix-design@file:..":
-  "resolved" "file:.."
-  "version" "0.4.2"
+"kreattix-design-icons@^0.3.6":
+  "integrity" "sha512-pEYazIi3P7GOUQdyqsA8hX4dah0kxf0WsBGWT3sbYns1gu0OpGkrTqArHpqgFbG6WBaC6ZiLUZMuOVtSYyk4rA=="
+  "resolved" "https://registry.npmjs.org/kreattix-design-icons/-/kreattix-design-icons-0.3.6.tgz"
+  "version" "0.3.6"
+
+"kreattix-design@^0.4.3":
+  "integrity" "sha512-PdOSlQz09GHuKR8cyNR+KLYR0RqAV5jBgPeHhPtONRutY8qYkEXbxN4Zi4U/JaMfHdcNGKf9+pKtlMwN3HybKA=="
+  "resolved" "https://registry.npmjs.org/kreattix-design/-/kreattix-design-0.4.3.tgz"
+  "version" "0.4.3"
   dependencies:
     "kreattix-design-icons" "^0.3.6"
     "lodash" "^4.17.21"
@@ -1639,7 +1645,7 @@
   "resolved" "https://registry.npmjs.org/quick-lru/-/quick-lru-4.0.1.tgz"
   "version" "4.0.1"
 
-"react-dom@^18.2.0":
+"react-dom@^18.2.0", "react-dom@16.8.0 || >=17.x":
   "integrity" "sha512-6IMTriUmvsjHUjNtEDudZfuDQUoWXVxKHhlEGSk81n4YFS+r/Kl99wXiwlVXtPBtJenozv2P+hxDsw9eA7Xo6g=="
   "resolved" "https://registry.npmjs.org/react-dom/-/react-dom-18.2.0.tgz"
   "version" "18.2.0"
@@ -1652,7 +1658,7 @@
   "resolved" "https://registry.npmjs.org/react-refresh/-/react-refresh-0.14.0.tgz"
   "version" "0.14.0"
 
-"react@^18.2.0":
+"react@^18.2.0", "react@16.8.0 || >=17.x":
   "integrity" "sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ=="
   "resolved" "https://registry.npmjs.org/react/-/react-18.2.0.tgz"
   "version" "18.2.0"

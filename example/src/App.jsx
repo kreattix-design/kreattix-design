@@ -1,4 +1,4 @@
-import { Box, Button, Colors, Icon, KreattixApp, Layout } from 'kreattix-design'
+import { Box, Button, Colors, Icon, KreattixApp, Layout, SiderController } from 'kreattix-design'
 
 function App() {
   return (
@@ -12,6 +12,7 @@ function App() {
               <Button variant="danger" type="text" pilled icon="ArrowLeft">
                 Button
               </Button>
+              <SiderController siderKey="main-sider" icon="MenuLeft" accentIcon="MenuRight" />
               <Icon icon="Close" shape="square" type="toned" color={Colors.primary} />
             </Box>
           </Layout.Content>

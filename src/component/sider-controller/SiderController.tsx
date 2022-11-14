@@ -6,20 +6,37 @@ import Icon from '../icon'
 import { useKreattixAppContext } from '../kreattix-app/KreattixApp'
 import { SiderControllerProps } from './types'
 
-const SiderController: FC<SiderControllerProps> = ({ className, siderKey, icon, accentIcon }) => {
+const SiderController: FC<SiderControllerProps> = ({
+  className,
+  siderKey,
+  icon,
+  accentIcon,
+  iconComponent,
+  accentIconComponent,
+}) => {
   const { sider } = useKreattixAppContext()
 
   const [activeIcon, setActiveIcon] = useState<boolean>(true)
 
   const siderToggleHandler = () => {
-    if (accentIcon) setActiveIcon((prev) => !prev)
+    if (accentIcon || accentIconComponent) setActiveIcon((prev) => !prev)
     sider.getSider(siderKey || '')?.toggleSider()
   }
 
   const classes = classnames(`sider-controller`, className, true)
 
+  const getDisplayIcon = () => {
+    if (activeIcon) {
+      if (iconComponent) return iconComponent
+      else return icon
+    } else {
+      if (accentIconComponent) return accentIconComponent
+      else return accentIcon
+    }
+  }
+
   if (siderKey) {
-    const displayIcon = activeIcon ? icon : accentIcon
+    const displayIcon = getDisplayIcon()
     if (typeof displayIcon === 'string') {
       return (
         <Icon className={classes} icon={displayIcon as IconNames} onClick={siderToggleHandler} />
