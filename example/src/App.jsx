@@ -6,7 +6,7 @@ function App() {
       <Layout hasSider>
         <Layout.Sider siderKey="main-sider"></Layout.Sider>
         <Layout>
-          <Layout.Header siderController={{ siderKey: 'main-sider' }}></Layout.Header>
+          <Layout.Header siderController={{ siderKey: 'main-sider' }}>Test</Layout.Header>
           <Layout.Content boxed>
             <Box gutter={3}>
               <Button variant="danger" type="text" pilled icon="ArrowLeft">

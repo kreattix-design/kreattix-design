@@ -1,7 +1,12 @@
 import { createContext, FC, useContext, useMemo } from 'react'
 
 import { Provider } from '../provider'
-import { KreattixAppContextProps, KreattixAppProps, SiderItemProps } from './types'
+import {
+  KreattixAppContextProps,
+  KreattixAppProps,
+  SiderItemProps,
+  SiderObjectProps,
+} from './types'
 
 const KreattixAppContext = createContext<KreattixAppContextProps>({
   sider: {
@@ -16,15 +21,17 @@ export const useKreattixAppContext = () => useContext(KreattixAppContext)
 const KreattixApp: FC<KreattixAppProps> = (props) => {
   const { children, appConfig = {} } = { ...props }
 
-  let siders: SiderItemProps[] = []
-  const setSiders = (sider: SiderItemProps) => (siders = [...siders, sider])
+  const siders: SiderObjectProps = {}
+  const setSiders = (sider: SiderItemProps) => (siders[sider.siderKey] = sider)
 
   const contextValue = useMemo<KreattixAppContextProps>(
     () => ({
       sider: {
-        getSider: (siderKey) => siders.find((sider) => sider.siderKey === siderKey),
+        getSider: (siderKey) => siders[siderKey] || null,
         addSider: (sider) => setSiders(sider),
-        removeSider: (siderKey) => siders.filter((sider) => sider.siderKey !== siderKey),
+        removeSider: (siderKey) => {
+          if (siders[siderKey]) delete siders[siderKey]
+        },
       },
     }),
     [siders],
