@@ -1,5 +1,6 @@
-import { ForwardRefExoticComponent, ReactNode } from 'react'
+import { DOMAttributes, ForwardRefExoticComponent, ReactNode } from 'react'
 
+import { SiderControllerProps } from '../sider-controller'
 import Content from './Content'
 import Header from './Header'
 import Sider from './Sider'
@@ -9,31 +10,32 @@ export interface LayoutContextProps {
   removeSider: (siderKey: string) => void
 }
 
-export interface LayoutProp {
+export interface LayoutProps extends DOMAttributes<HTMLDivElement> {
   children?: ReactNode
   className?: string
   hasSider?: boolean
 }
 
-export interface HeaderProp {
+export interface HeaderProps extends DOMAttributes<HTMLDivElement> {
   children?: ReactNode
   className?: string
-  targetSider?: string
+  siderController?: SiderControllerProps
 }
 
-export interface ContentProp {
+export interface ContentProps extends DOMAttributes<HTMLDivElement> {
   children?: ReactNode
   className?: string
   boxed?: boolean
 }
 
-export interface SiderProps {
+export interface SiderProps extends DOMAttributes<HTMLDivElement> {
   children?: ReactNode
   className?: string
   siderKey: string
+  collapsed?: boolean
 }
 
-export interface LayoutCompoundProps extends ForwardRefExoticComponent<LayoutProp> {
+export interface LayoutCompoundProps extends ForwardRefExoticComponent<LayoutProps> {
   Sider: typeof Sider
   Header: typeof Header
   Content: typeof Content

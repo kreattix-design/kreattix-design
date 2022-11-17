@@ -8,8 +8,11 @@ import {
   ContainerProps,
   DividerProps,
   GridProps,
+  HeaderProps,
   IconProps,
   ParagraphProps,
+  SiderControllerProps,
+  SiderProps,
   TextProps,
   TitleProps,
 } from '../../types'
@@ -43,6 +46,12 @@ export interface KreattixContextProps {
   Paragraph?: Pick<ParagraphProps, 'variant' | 'ellipsis' | 'align'>
   Text?: Pick<TextProps, 'variant' | 'ellipsis' | 'disabled'>
   Title?: Pick<TitleProps, 'variant' | 'ellipsis' | 'align' | 'level'>
+  LayoutHeader?: Pick<HeaderProps, 'siderController'>
+  LayoutSider?: Pick<SiderProps, 'collapsed'>
+  SiderController?: Pick<
+    SiderControllerProps,
+    'accentIcon' | 'accentIconComponent' | 'icon' | 'iconComponent' | 'siderKey'
+  >
 }
 
 export interface ProviderProps {

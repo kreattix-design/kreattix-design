@@ -7,21 +7,21 @@
 
   @each $color, $value in $colors {
     --#{$prefix}#{$color}: #{$value};
-    --#{$prefix}#{$color}-100: #{lighten($value, 20%)};
-    --#{$prefix}#{$color}-200: #{lighten($value, 15%)};
-    --#{$prefix}#{$color}-300: #{lighten($value, 10%)};
-    --#{$prefix}#{$color}-400: #{lighten($value, 5%)};
+    --#{$prefix}#{$color}-100: #{lighten($value, 32%)};
+    --#{$prefix}#{$color}-200: #{lighten($value, 24%)};
+    --#{$prefix}#{$color}-300: #{lighten($value, 16%)};
+    --#{$prefix}#{$color}-400: #{lighten($value, 8%)};
     --#{$prefix}#{$color}-500: #{$value};
-    --#{$prefix}#{$color}-600: #{darken($value, 5%)};
-    --#{$prefix}#{$color}-700: #{darken($value, 10%)};
-    --#{$prefix}#{$color}-800: #{darken($value, 15%)};
-    --#{$prefix}#{$color}-900: #{darken($value, 20%)};
+    --#{$prefix}#{$color}-600: #{darken($value, 8%)};
+    --#{$prefix}#{$color}-700: #{darken($value, 16%)};
+    --#{$prefix}#{$color}-800: #{darken($value, 24%)};
+    --#{$prefix}#{$color}-900: #{darken($value, 32%)};
     --#{$prefix}#{$color}-rgb: #{to-rgb($value)};
   }
   @each $color, $value in $theme-colors {
     --#{$prefix}#{$color}: #{$value};
-    --#{$prefix}#{$color}-hover: #{lighten($value, 5%)};
-    --#{$prefix}#{$color}-active: #{darken($value, 5%)};
+    --#{$prefix}#{$color}-hover: #{lighten($value, 8%)};
+    --#{$prefix}#{$color}-active: #{darken($value, 8%)};
     --#{$prefix}#{$color}-rgb: #{to-rgb($value)};
   }
   @each $color, $value in $greys {

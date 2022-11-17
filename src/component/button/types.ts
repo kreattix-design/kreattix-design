@@ -1,5 +1,5 @@
 import { IconNames } from 'kreattix-design-icons/dist/types'
-import { ForwardRefExoticComponent, HTMLAttributes, ReactNode } from 'react'
+import { DOMAttributes, ForwardRefExoticComponent, ReactNode } from 'react'
 
 import { Sizes, Variants } from '../../types'
 import ButtonGroup from './ButtonGroup'
@@ -9,6 +9,8 @@ export type IconPositions = 'start' | 'end'
 export type ButtonTypes = 'solid' | 'outlined' | 'text'
 
 export interface DefaultButtonProps {
+  children?: ReactNode
+  className?: string
   type?: ButtonTypes
   variant?: Variants
   size?: Sizes
@@ -19,15 +21,11 @@ export interface DefaultButtonProps {
   fluid?: boolean
 }
 
-export interface ButtonProps
-  extends Omit<HTMLAttributes<HTMLButtonElement>, 'type'>,
-    DefaultButtonProps {
+export interface ButtonProps extends DefaultButtonProps, DOMAttributes<HTMLButtonElement> {
   disabled?: boolean
 }
 
-export interface ButtonLinkProps
-  extends Omit<HTMLAttributes<HTMLAnchorElement>, 'type'>,
-    DefaultButtonProps {}
+export interface ButtonLinkProps extends DefaultButtonProps, DOMAttributes<HTMLAnchorElement> {}
 
 export interface ButtonGroupProps extends DefaultButtonProps {
   children?: ReactNode

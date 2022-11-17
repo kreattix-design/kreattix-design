@@ -1,4 +1,4 @@
-import { ForwardRefExoticComponent, ReactNode } from 'react'
+import { DOMAttributes, ForwardRefExoticComponent, ReactNode } from 'react'
 
 import {
   AlignItems,
@@ -9,7 +9,7 @@ import {
 } from '../../types'
 import GridItem from './GridItem'
 
-export interface GridProps {
+export interface GridProps extends DOMAttributes<HTMLDivElement> {
   children?: ReactNode
   className?: string
   align?: AlignItems
@@ -18,7 +18,7 @@ export interface GridProps {
   gutter?: Gutters | ResponsiveGutters
 }
 
-export interface GridItemProps {
+export interface GridItemProps extends DOMAttributes<HTMLDivElement> {
   children?: ReactNode
   className?: string
   span?: number | ResponsiveGutters

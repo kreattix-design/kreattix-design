@@ -1,8 +1,8 @@
-import { ReactNode } from 'react'
+import { DOMAttributes, ReactNode } from 'react'
 
 import { BorderStyles, FlexDirections, Orientations } from '../../types'
 
-export interface DividerProps {
+export interface DividerProps extends DOMAttributes<HTMLDivElement> {
   children: ReactNode
   className: string
   direction?: FlexDirections

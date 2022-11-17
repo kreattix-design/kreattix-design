@@ -4,11 +4,10 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "start": "npm run install && vite",
+    "start": "vite",
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview",
-    "install": "npm uninstall kreattix-design && npm install kreattix-design@file:.."
+    "preview": "vite preview"
   },
   "dependencies": {
     "kreattix-design": "file:..",

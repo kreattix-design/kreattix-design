@@ -1,25 +1,19 @@
+import { merge } from 'lodash'
 import { FC } from 'react'
 
 import { classnames } from '../../utils'
-import Icon from '../icon'
-import { useKreattixAppContext } from '../kreattix-app/KreattixApp'
-import { HeaderProp } from './types'
+import { useKreattixContext } from '../provider'
+import SiderController from '../sider-controller'
+import { HeaderProps } from './types'
 
-const Header: FC<HeaderProp> = (props) => {
-  const { children, className, targetSider } = props
-  const {
-    sider: { getSider },
-  } = useKreattixAppContext()
-
-  const siderToggler = () => {
-    if (targetSider) getSider(targetSider)?.toggleSider()
-  }
+const Header: FC<HeaderProps> = (props) => {
+  const { children, className, siderController } = merge(useKreattixContext().LayoutHeader, props)
 
   const classes = classnames(`layout-header`, className, true)
 
   return (
     <header className={classes}>
-      <Icon icon="ArrowLeft" onClick={siderToggler} />
+      <SiderController {...siderController} />
       {children}
     </header>
   )

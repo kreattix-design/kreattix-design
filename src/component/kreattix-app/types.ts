@@ -9,7 +9,12 @@ export interface KreattixAppProps {
 
 export interface SiderItemProps {
   siderKey: string
+  collapsed: boolean
   toggleSider: () => void
+}
+
+export interface SiderObjectProps {
+  [key: string]: SiderItemProps
 }
 
 export interface KreattixAppContextProps {

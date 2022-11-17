@@ -35,4 +35,11 @@ export const DefaultConfig: KreattixContextProps = {
     level: 1,
     ellipsis: false,
   },
+  LayoutHeader: {},
+  LayoutSider: {
+    collapsed: false,
+  },
+  SiderController: {
+    icon: 'MenuLeft',
+  },
 }

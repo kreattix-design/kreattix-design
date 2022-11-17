@@ -2,6 +2,7 @@ import { FC, useContext, useEffect, useState } from 'react'
 
 import { classnames } from '../../utils'
 import { useKreattixAppContext } from '../kreattix-app/KreattixApp'
+import { useKreattixContext } from '../provider'
 import { LayoutContext } from './Layout'
 import { SiderProps } from './types'
 
@@ -14,11 +15,14 @@ const generateId = (() => {
 })()
 
 const Sider: FC<SiderProps> = (props) => {
-  const { children, className, siderKey } = props
+  const { children, className, siderKey, collapsed } = {
+    ...useKreattixContext().LayoutSider,
+    ...props,
+  }
 
   const { sider } = useKreattixAppContext()
   const { addSider, removeSider } = useContext(LayoutContext)
-  const [siderCollapsed, setSiderCollapsed] = useState<boolean>(false)
+  const [siderCollapsed, setSiderCollapsed] = useState<boolean>(collapsed || false)
 
   const classes = classnames(
     {
@@ -35,6 +39,7 @@ const Sider: FC<SiderProps> = (props) => {
     addSider(uniqueId)
     sider.addSider({
       siderKey: uniqueId,
+      collapsed: false,
       toggleSider: () => setSiderCollapsed((prev) => !prev),
     })
     return () => {
